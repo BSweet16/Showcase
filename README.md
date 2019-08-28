@@ -1,3 +1,7 @@
+# Resume
+Last updated 8/28/19
+Linked In Profile: https://www.linkedin.com/in/blake-sweet-097741117/
+
 # Blackjack
 I created this Blackjack game as a fun project for long car rides. <br/>
 Please excuse the hairy code, there were little children in the car rides as well and they could be distracting at times. <br/>
