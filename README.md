@@ -1,6 +1,6 @@
 # Resume
-Last updated 10/30/19
-Linked In Profile: https://www.linkedin.com/in/blake-sweet-097741117/
+Last updated 10/30/19. <br/>
+Linked In Profile: https://www.linkedin.com/in/blake-sweet-097741117/ <br/>
 
 # Blackjack
 I created this Blackjack game as a fun project for long car rides. <br/>
