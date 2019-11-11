@@ -61,6 +61,10 @@ char helper::ShowOptions(card hand[]){
         do{
             cout << "Which would you like to do?\n(H) Hit\n(S) Stand\n(P) Split\n::=>";
             cin >> Answer;
+            if (cin.fail()){ // Verify input
+                cin.clear();
+                cin.ignore(numeric_limits<int>::max(),'\n');
+            }
             if (Answer != 'h' && Answer != 'H' && Answer != 's' && Answer != 'S' && Answer != 'p' && Answer != 'P'){
                 cout << "Invalid choice. Please double check available options." << '\n';
             }
@@ -71,6 +75,10 @@ char helper::ShowOptions(card hand[]){
         do{
             cout << "Which would you like to do?\n(H) Hit\n(S) Stand\n::=>";
             cin >> Answer;
+            if (cin.fail()){ // Verify input
+                cin.clear();
+                cin.ignore(numeric_limits<int>::max(),'\n');
+            }
             if (Answer != 'h' && Answer != 'H' && Answer != 's' && Answer != 'S'){
                 cout << "Invalid choice. Please double check available options." << '\n';
             }
@@ -86,6 +94,10 @@ char helper::ShowOptions(card hand[], card secondhand[]){
     
     cout << "Which would you like to do?\n(H) Hit\n(S) Stand\n::=>";
     cin >> Answer;
+    if (cin.fail()){ // Verify input
+        cin.clear();
+        cin.ignore(numeric_limits<int>::max(),'\n');
+    }
     cout << '\n';
     
     return Answer;
@@ -155,6 +167,10 @@ int helper::GetBet(int PlayerBal){
         cout << "Balance: $" << PlayerBal << '\n';
         cout << "Place a bet: $";
         cin >> bet;
+        if (cin.fail()){ // Verify input
+            cin.clear();
+            cin.ignore(numeric_limits<int>::max(),'\n');
+        }
         
         if (bet > PlayerBal){
             cout << "You don't have that much to bet!" << '\n' << '\n';

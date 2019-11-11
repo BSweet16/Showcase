@@ -66,7 +66,7 @@ void card::PrintCardsInDeck(){
 void card::PrintCard(){
     int CardNum = GetNum();
     string Name = "";
-    
+
     if (CardNum == 1 || CardNum == 14 || CardNum == 27 || CardNum == 40){
         Name = "Ace";
     }
@@ -82,10 +82,10 @@ void card::PrintCard(){
     else{
         Name = GetNum();
     }
-    
+
     if (CardNum == 1 || CardNum == 14 || CardNum == 27 || CardNum == 40 || CardNum == 11 || CardNum == 24 || CardNum == 37 || CardNum == 50 || CardNum == 12 || CardNum == 25 || CardNum == 38 || CardNum == 51 || CardNum == 13 || CardNum == 26 || CardNum == 39 || CardNum == 52){
-        
-        if (GetSuit() == "♣" || GetSuit() == "♠"){ // Added extra space for club alignment
+
+        if (GetSuit() == "♣" || GetSuit() == "♠"){ // Added extra space for club and spade alignment
             cout << "\t\t" << setw(12) << "+------+" << '\n'
                  << "\t\t" << setw(1) <<  "|" << left << setw(6) << Name << setw(1) << "|" << '\n'
                  << "\t\t" << setw(1) <<  "|" << left << setw(7) << GetSuit() << setw(1) << " |" << '\n'
@@ -113,3 +113,16 @@ void card::PrintCard(){
         }
     }
 }
+//
+//void card::PrintCard(){
+//    // Read the image file
+//    Mat image = imread("D:/My OpenCV Website/Lady with a Guitar.jpg");
+//
+//    // Check for failure
+//    if (image.empty())
+//    {
+//        cout << "Could not open or find the image" << endl;
+//        cin.get(); //wait for any key press
+//        return -1;
+//    }
+//}

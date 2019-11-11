@@ -37,6 +37,10 @@ int Start(){
         H.Clr();
         cout << "=== Welcome to the table === \n1: Play Game \n2: Print Deck \n3: Quit \n::=> ";
         cin >> choice;
+        if (cin.fail()){ // Verify input
+            cin.clear();
+            cin.ignore(numeric_limits<int>::max(),'\n');
+        }
         
         /* Make a Choice */
         switch(choice){
@@ -76,12 +80,9 @@ int main() {
     card DealerHand[MAX_HAND];
     char HSS; // (HSS = Hit/ Stand/ Split)
     helper H; // Create the helper
-    
-    // Initialize ncurses library and seed
-    srand(static_cast<unsigned int>(time(NULL)));  // seed
-    
-    /* Create the Cards */
-    deck G;
+    deck G; // Create cards
+
+    srand(static_cast<unsigned int>(time(NULL)));  // seed and initialize ncurses library
     
     /* Menu */
     MenuChoice = Start();
@@ -107,8 +108,7 @@ int main() {
             d1 = rand() % 52 + 1;
             d2 = rand() % 52 + 1;
         }while(!UniqueCards(c1, c2, d1, d2));
-        c1 = 2;
-        c2 = 24;
+
         G.AddToHand(PlayerHand, c1);
         G.AddToHand(PlayerHand, c2);
         G.AddToHand(DealerHand, d1);
@@ -235,7 +235,7 @@ int main() {
         H.GoodBye(Bal);
     }
     
-    //system("pause");
+    system("pause");
     return 0;
     
 }
