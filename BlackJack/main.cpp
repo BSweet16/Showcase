@@ -235,7 +235,7 @@ int main() {
         H.GoodBye(Bal);
     }
     
-    system("pause");
+    //system("pause");
     return 0;
     
 }
